@@ -4,33 +4,84 @@
   font-weight: normal;
   font-style: normal;
 }
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 body {
   padding: 0;
   margin: 0;
   font-size: 62.2%;
-  font-family: 'YeahPapa';
   background: #eee;
+  position: relative;
+  font-family: 'Istok Web', sans-serif;
 }
-header {
+.header {
+  height: 100%;
+  background: url("../img/bg-gorilla.jpg") center top no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.header-top {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 3em 0;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: box;
   display: flex;
-  height: 70em;
-  background: url("../img/bg-gorilla.jpg") center top no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-}
-.header-content {
-  margin: auto;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 .header-logo {
-  max-width: 9em;
+  font-family: 'Pacifico', cursive;
+  color: #ddd;
+  font-size: 4em;
+  line-height: 1;
+  margin: 0;
+}
+.header-content {
+  max-width: 1040px;
+  margin: 11em auto 0 auto;
+}
+.header-logo-brand {
+  display: block;
+  width: 17em;
+  margin: auto;
   height: auto;
 }
-.header-logo img {
-  max-width: 100%;
+.header-description {
+  font-size: 3em;
+  color: #9b59b6;
+  text-align: center;
+  margin: 0.5em 0;
+}
+.header-nav,
+.header-nav-list {
+  margin: 0;
+  padding: 0.7em 0 0 0;
+  list-style: none;
+}
+.header-nav-item {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+.header-nav-link {
+  color: #ddd;
+  font-size: 1.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.header-nav-link:hover {
+  color: #9b59b6;
 }

@@ -1,23 +1,66 @@
+html, body
+  height: 100%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
 body
   padding: 0
   margin: 0
   font-size: 62.2%
-  font-family: 'YeahPapa'
   background: #eee
-  
-header
-  display: flex
-  height: 70em
+  position: relative
+  font-family: $font-default
+
+.header
+  height: 100%
   background: url('../img/bg-gorilla.jpg') center top no-repeat
   background-size: cover
-  
-.header-content
-  margin: auto
-  
+
+.header-top
+  max-width: $size-container
+  margin: 0 auto
+  padding: 3em 0
+  display: flex
+  justify-content: space-between
+
 .header-logo
-  max-width: 9em
+  font-family: $font-title
+  color: #ddd
+  font-size: 4em
+  line-height: 1
+  margin: 0
+
+.header-content
+  max-width: $size-container
+  margin: 11em auto 0 auto
+
+.header-logo-brand
+  display: block
+  width: 17em
+  margin: auto
   height: auto
-  
-  img
-    max-width: 100% 
+
+.header-description
+  font-size: 3em
+  color: $color-primary
+  text-align: center
+  margin: .5em 0
+
+.header-nav, .header-nav-list
+  margin: 0
+  padding: .7em 0 0 0
+  list-style: none
+
+.header-nav-item
+  display: inline-block
+  margin: 0 .5em
+
+.header-nav-link
+  color: #ddd
+  font-size: 1.4em
+  text-decoration: none
+  text-transform: uppercase
+  font-weight: 700
+
+  &:hover
+    color: $color-primary
