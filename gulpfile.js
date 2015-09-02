@@ -4,6 +4,7 @@ var gulp       = require('gulp'),
     stylus     = require('gulp-stylus'),
     handlebars = require('gulp-compile-handlebars'),
     rename     = require('gulp-rename'),
+    ghPages    = require('gulp-gh-pages'),
     plumber    = require('gulp-plumber');
 
 var paths = {
@@ -42,10 +43,16 @@ gulp.task('stylus', function () {
     gulp.src(files.stylus)
         .pipe(plumber())
         .pipe(stylus({
-            use: ['nib'], 
+            use: ['nib'],
         }))
         .pipe(gulp.dest(paths.dist + '/assets/css'))
         .pipe(connect.reload());
+});
+
+// Deploy to gh-pages task
+gulp.task('deploy', function() {
+  return gulp.src(paths.dist)
+    .pipe(ghPages());
 });
 
 // Watch task
