@@ -1,2 +1,2 @@
 # Gorilla
-> Made vanilla plugin faster
+> Generate vanilla plugin faster

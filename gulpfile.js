@@ -51,7 +51,7 @@ gulp.task('stylus', function () {
 
 // Deploy to gh-pages task
 gulp.task('deploy', function() {
-  return gulp.src(paths.dist)
+  return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
 
