@@ -12,6 +12,11 @@ var paths = {
     src:    './src'
 };
 
+var watches = {
+    stylus:     paths.src + '/stylus/**/*.styl',
+    handlebars: paths.src + '/handlebars/**/*.hbs'
+};
+
 var files = {
     stylus:     paths.src + '/stylus/*.styl',
     handlebars: paths.src + '/handlebars/*.hbs'
@@ -51,14 +56,14 @@ gulp.task('stylus', function () {
 
 // Deploy to gh-pages task
 gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
+  return gulp.src(paths.dist + '/**/*')
     .pipe(ghPages());
 });
 
 // Watch task
 gulp.task('watch', function () {
-    gulp.watch(paths.src + '/stylus/**/*.styl', ['stylus']);
-    gulp.watch(files.handlebars, ['handlebars']);
+    gulp.watch(watches.stylus, ['stylus']);
+    gulp.watch(watches.handlebars, ['handlebars']);
 });
 
 // Set 'gulp server' for development
