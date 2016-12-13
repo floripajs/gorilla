@@ -46,4 +46,4 @@ Want to contribute? [Follow these recommendations](https://github.com/floripajs/
 See [Releases](https://github.com/floripajs/gorilla/releases) for detailed changelog.
 
 ## License
-[MIT License](https://github.com/floripajs/gorilla/blob/master/license.md) © [Diogo Moretti](https://github.com/diogomoretti)
+[MIT License](https://github.com/floripajs/gorilla/blob/master/license.md) © [Diogo Moretti](https://github.com/diogomoretti) and [Afonso Pacifer](https://github.com/afonsopacifer)

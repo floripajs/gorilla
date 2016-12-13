@@ -1,4 +1,4 @@
-Copyright (c) 2016 [Diogo Moretti](https://github.com/diogomoretti)
+Copyright (c) 2016 [Diogo Moretti](https://github.com/diogomoretti) and and [Afonso Pacifer](https://github.com/afonsopacifer)
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
