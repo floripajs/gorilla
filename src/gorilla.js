@@ -1,7 +1,14 @@
-const gorilla = {
-  log (message) {
-    return `Logging the message : ${message}`
+class Gorilla {
+
+  constructor (el, options) {
+    this.log(el)
   }
+
+  log (el) {
+    let div = document.querySelector(el)
+    div.innerHTML = 'Hello module =]'
+  }
+
 }
 
-export default gorilla
+module.exports = Gorilla

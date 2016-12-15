@@ -4,10 +4,9 @@
   "description": "",
   "main": "./dist/gorilla.js",
   "scripts": {
-    "start": "webpack -w",
-    "build": "webpack -p",
-    "test": "ava tests/**/*.js",
-    "test-w": "ava -w tests/**/*.js",
+    "build": "browserify ./src/gorilla.js -s Gorilla -t [babelify] -o ./dist/gorilla.js",
+    "build:min": "uglifyjs dist/gorilla.js --comments '/!/' -m screw_ie8=true -c screw_ie8=true,unused=false -o dist/gorilla.min.js",
+    "watch": "watchify src/gorilla.js -s Gorilla -t [babelify] -o dist/gorilla.js -v",
     "prepublish": "npm build && npm test"
   },
   "repository": {
@@ -21,10 +20,13 @@
   "homepage": "https://github.com/floripajs/gorilla#readme",
   "devDependencies": {
     "ava": "^0.17.0",
+    "babel-cli": "^6.18.0",
     "babel-loader": "^6.2.9",
-    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "webpack": "^1.14.0"
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "uglify-js": "^2.7.5",
+    "watchify": "^3.8.0"
   }
 }
