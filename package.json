@@ -7,6 +7,7 @@
     "build": "browserify ./src/gorilla.js -s Gorilla -t [babelify] -o ./dist/gorilla.js",
     "build:min": "uglifyjs dist/gorilla.js --comments '/!/' -m screw_ie8=true -c screw_ie8=true,unused=false -o dist/gorilla.min.js",
     "watch": "watchify src/gorilla.js -s Gorilla -t [babelify] -o dist/gorilla.js -v",
+    "test": "ava --verbose tests/**/*.js",
     "prepublish": "npm build && npm test"
   },
   "repository": {
