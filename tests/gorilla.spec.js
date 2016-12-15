@@ -1,6 +1,7 @@
-var test = require('ava');
-var gorilla = require('../dist/gorilla');
+const Gorilla = require('../src/gorilla')
+document.body.innerHTML = '<div id="demo"></div>'
 
-test('the log method', t => {
-  t.is(gorilla.log('hi'), 'Logging the message : hi');
-});
+test('adds 1 + 2 to equal 3', () => {
+  let gorilla = new Gorilla('#demo')
+  expect(gorilla.sum(1, 2)).toBe(3)
+})
