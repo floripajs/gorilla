@@ -46,6 +46,11 @@
     }
 
     _createClass(Gorilla, [{
+      key: 'sum',
+      value: function sum(n1, n2) {
+        return n1 + n2;
+      }
+    }, {
       key: 'log',
       value: function log(el) {
         var div = document.querySelector(el);
